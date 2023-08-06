@@ -50,7 +50,7 @@ Run codecrafty:
 
 Let the fun begin! 🎉🚀
 
- ##Contributing
+## Contributing
 🙌 We welcome contributions to codecrafty! Whether it's fixing a bug or adding new quirky features, your creativity is valued! 🤝🎭
 
 Please adhere to the following guidelines:
