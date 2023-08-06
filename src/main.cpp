@@ -1,14 +1,26 @@
 #include "import.hpp"
+#include "engine.cpp"
 
 class codecrafty {
     public:
         codecrafty() {
-            sf::Window window(sf::VideoMode(800, 600), "My window");
+            sf::RenderWindow window;
+            window.create(sf::VideoMode(width, height), title);
+            app(&window);
             loop(&window);
 
         }
     private:
-        void loop(sf::Window *window) {
+        engine engine;
+        std::string title = "codecrafty";
+        int width = 1280;
+        int height = 720;
+
+        void app(auto *window) {
+            window->setFramerateLimit(60);
+        }
+
+        void loop(auto *window) {
             while (window->isOpen())
             {
                 sf::Event event;
@@ -17,6 +29,10 @@ class codecrafty {
                     if (event.type == sf::Event::Closed)
                         window->close();
                 }
+
+                engine.set_background_color(window, sf::Color::Black);
+
+                engine.display(window);
             }
         }
 };
