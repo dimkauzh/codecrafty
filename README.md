@@ -76,7 +76,7 @@ git push origin your-feature
 Open a pull request and let's discuss the awesomeness you've brought to codecrafty! 🚀📩
 
 ## Support
-🤝 We appreciate your interest in codecrafty! For any questions or feedback, reach out to us via email: support@codecrafty.fun 💌
+🤝 We appreciate your interest in codecrafty! For any questions or feedback, reach out to us using github issues! 💌
 
 ## License
 📜 codecrafty is licensed under the MIT License - see the LICENSE file for details. 📄
