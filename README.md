@@ -43,11 +43,14 @@ Build and run the project:
 make build
 ```
 
-Run codecrafty: ./codecrafty
+Run codecrafty:
+```bash
+./codecrafty
+```
 
 Let the fun begin! 🎉🚀
 
-Contributing
+ ##Contributing
 🙌 We welcome contributions to codecrafty! Whether it's fixing a bug or adding new quirky features, your creativity is valued! 🤝🎭
 
 Please adhere to the following guidelines:
@@ -60,10 +63,10 @@ Push to the branch: git push origin your-feature
 
 Open a pull request and let's discuss the awesomeness you've brought to codecrafty! 🚀📩
 
-Support
+## Support
 🤝 We appreciate your interest in codecrafty! For any questions or feedback, reach out to us via email: support@codecrafty.fun 💌
 
-License
+## License
 📜 codecrafty is licensed under the MIT License - see the LICENSE file for details. 📄
 
 Happy coding! 😄🚀🎉
