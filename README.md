@@ -55,12 +55,9 @@ Let the fun begin! 🎉🚀
 
 Please adhere to the following guidelines:
 
-Create a new branch for your contribution: git checkout -b your-feature
-
-Make your changes and commit: git commit -m "Add some feature"
-
-Push to the branch: git push origin your-feature
-
+Create a new branch for your contribution: ```bash git checkout -b your-feature ```
+Make your changes and commit: ```bash git commit -m "Add some feature" ```
+Push to the branch: ```bash git push origin your-feature ```
 Open a pull request and let's discuss the awesomeness you've brought to codecrafty! 🚀📩
 
 ## Support
