@@ -39,6 +39,18 @@ setup:
 	git clone https://github.com/raysan5/raylib.git libraries/raylib
 	cd libraries/raylib/src && make PLATFORM=PLATFORM_DESKTOP RAYLIB_LIBTYPE=STATIC
 
+setup_github:
+	sudo apt-get update
+	sudo apt-get install libx11-dev
+	sudo apt-get install libxcursor-dev
+	sudo apt-get install libxinerama-dev
+	sudo apt-get install libxcursor-dev
+	sudo apt-get install libgl1-mesa-dev
+	sudo apt-get install xorg-dev
+	
+	git clone https://github.com/raysan5/raylib.git libraries/raylib
+	cd libraries/raylib/src && make PLATFORM=PLATFORM_DESKTOP RAYLIB_LIBTYPE=STATIC
+
 clean:
 	@echo " ------------------------------"
 	@echo "|  Cleaning the build folder   |"
