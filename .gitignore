@@ -31,5 +31,11 @@
 *.out
 *.app
 
+# Builds
 build/
+
+# VSCode
 .vscode/
+
+# Raylib build
+#libraries/raylib/*

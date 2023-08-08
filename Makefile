@@ -1,10 +1,22 @@
 COMPILER = g++
-LIB_FLAGS = -lraylib
+LIB_FLAGS = -Ilibraries/raylib/src/ -Llibraries/raylib/src/ -lraylib
 BUILD_FLAGS = -o build/codecrafty src/main.cpp
 OPTIMIZE_FLAGS = -O2
-CPP_FLAGS = -std=c++20
+CPP_FLAGS = -std=gnu++2b
 
-.PHONY: run build clean
+UNAME_S := $(shell uname -s)
+
+ifeq ($(UNAME_S), Darwin)
+	LIB_FLAGS += -framework OpenGL -framework OpenAL -framework Cocoa -framework IOKit -framework CoreVideo
+endif
+ifeq ($(UNAME_S), Linux)
+	LIB_FLAGS += -lm -lpthread -ldl -lrt -lX11
+endif
+ifeq ($(findstring MINGW,$(UNAME_S)),MINGW)
+	LIB_FLAGS += -lopengl32 -lgdi32
+endif
+
+.PHONY: run build clean setup
 
 run:
 	@echo " ------------------------------"
@@ -23,9 +35,12 @@ build:
 	@echo " ------------------------------"
 	$(COMPILER) $(CPP_FLAGS) $(OPTIMIZE_FLAGS) $(BUILD_FLAGS) $(LIB_FLAGS)
 
+setup:
+	git clone https://github.com/raysan5/raylib.git libraries/raylib
+	cd libraries/raylib/src && make PLATFORM=PLATFORM_DESKTOP RAYLIB_LIBTYPE=STATIC
+
 clean:
 	@echo " ------------------------------"
 	@echo "|  Cleaning the build folder   |"
 	@echo " ------------------------------"
 	rm -rf build/*
-
