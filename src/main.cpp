@@ -6,7 +6,6 @@ class codecrafty {
     public:
         codecrafty() {
             init();
-            app();
 
         }
     private:
@@ -20,11 +19,14 @@ class codecrafty {
         void init() {
             InitWindow(width, height, title);
             SetTargetFPS(60);
+
+            Menu();
         }
 
-        void app() {
+        void Menu() {
 
-            Button button(engine.new_rect(300, 300, 200, 200), YELLOW, YELLOW, "HELLO");
+            Button new_project(engine.new_rect(50, 300, 150, 45), GRAY, LIGHTGRAY, "New Project");
+            Button open_project(engine.new_rect(50, 350, 150, 45), GRAY, LIGHTGRAY, "Open Project");
 
             while (!WindowShouldClose())
             {
@@ -32,14 +34,18 @@ class codecrafty {
                 BeginDrawing();
 
                     ClearBackground(RAYWHITE);
-                    DrawText("Congrats! You created your first window!", 190, 200, 20, LIGHTGRAY);
-                    button.draw();
+                    DrawText("Welcome to codecrafty!", 400, 10, 30, BLACK);
+                    new_project.draw();
+                    open_project.draw();
 
 
                 EndDrawing();
 
-                if (button.is_pressed()) {
-                    engine.print("clicked");
+                if (new_project.is_pressed()) {
+                    engine.print("New Project");
+                }
+                else if (open_project.is_pressed()) {
+                    engine.print("Open Project");
                 }
 
             }
@@ -47,7 +53,7 @@ class codecrafty {
 };
 
 int main() {
-    codecrafty cc;
+    codecrafty app;
     return 0;
 }
 
