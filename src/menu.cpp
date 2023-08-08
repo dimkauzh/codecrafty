@@ -7,9 +7,8 @@ public:
         loading_screen();
     }
 private:
-    engine engine;
-
     void loading_screen() {
+        engine engine;
         Button new_project(engine.new_rect(50, 300, 150, 45), GRAY, LIGHTGRAY, "New Project");
         Button open_project(engine.new_rect(50, 350, 150, 45), GRAY, LIGHTGRAY, "Open Project");
 
