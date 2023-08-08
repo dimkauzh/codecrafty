@@ -2,7 +2,7 @@
 🎉📝 Welcome to codecrafty! 🎉📝
 
 ### Description
-🚀 codecrafty is a super extensible code editor written in C++ and powered by SFML. It's designed to be an enjoyable and educational project, where you can dive into the world of code and unleash your creativity! 🤩
+🚀 codecrafty is a super extensible code editor written in C++ and powered by raylib. It's designed to be an enjoyable and educational project, where you can dive into the world of code and unleash your creativity! 🤩
 
 ### Disclaimer
 ⚠️ Important: codecrafty is purely created for fun and educational purposes. 🤓 It's packed with weird design issues that will keep you on your toes! Embrace the quirks and let your coding adventures begin! 🕵️‍♂️💻
@@ -12,7 +12,7 @@
 
 🧩 Super Extensible: codecrafty provides a framework that allows you to add your own twists, extensions, and surprises! 🧠💡
 
-🚀 Blazing Fast: Harness the power of C++ and SFML for a seamless coding experience. ⚡️💻
+🚀 Blazing Fast: Harness the power of C++ and raylib for a seamless coding experience. ⚡️💻
 
 🌈 Aesthetically Quirky: Embrace the weirdness of codecrafty's design issues for a one-of-a-kind coding journey! 🎨😄
 

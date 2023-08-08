@@ -1,5 +1,5 @@
 COMPILER = g++
-LIB_FLAGS = -lsfml-graphics -lsfml-window -lsfml-system
+LIB_FLAGS = -lraylib
 BUILD_FLAGS = -o build/codecrafty src/main.cpp
 OPTIMIZE_FLAGS = -O2
 CPP_FLAGS = -std=c++20

@@ -1,38 +1,47 @@
 #include "import.hpp"
 #include "engine.cpp"
+#include "fonts.cpp"
 
 class codecrafty {
     public:
         codecrafty() {
-            sf::RenderWindow window;
-            window.create(sf::VideoMode(width, height), title);
-            app(&window);
-            loop(&window);
+            init();
+            app();
 
         }
     private:
         engine engine;
-        std::string title = "codecrafty";
+        fonts all_fonts;
+
+        char title[11] = "codecrafty";
         int width = 1280;
         int height = 720;
 
-        void app(auto *window) {
-            window->setFramerateLimit(60);
+        void init() {
+            InitWindow(width, height, title);
+            SetTargetFPS(60);
         }
 
-        void loop(auto *window) {
-            while (window->isOpen())
+        void app() {
+
+            Button button(engine.new_rect(300, 300, 200, 200), YELLOW, YELLOW, "HELLO");
+
+            while (!WindowShouldClose())
             {
-                sf::Event event;
-                while (window->pollEvent(event))
-                {
-                    if (event.type == sf::Event::Closed)
-                        window->close();
+
+                BeginDrawing();
+
+                    ClearBackground(RAYWHITE);
+                    DrawText("Congrats! You created your first window!", 190, 200, 20, LIGHTGRAY);
+                    button.draw();
+
+
+                EndDrawing();
+
+                if (button.is_pressed()) {
+                    engine.print("clicked");
                 }
 
-                engine.set_background_color(window, sf::Color::Black);
-
-                engine.display(window);
             }
         }
 };
