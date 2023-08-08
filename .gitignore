@@ -39,3 +39,4 @@ build/
 
 # Raylib build
 libraries/raylib/*
+libraries/raylib/

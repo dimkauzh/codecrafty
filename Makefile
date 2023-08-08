@@ -10,7 +10,7 @@ ifeq ($(UNAME_S), Darwin)
 	LIB_FLAGS += -framework OpenGL -framework OpenAL -framework Cocoa -framework IOKit -framework CoreVideo
 endif
 ifeq ($(UNAME_S), Linux)
-	LIB_FLAGS += -lm -lpthread -ldl -lrt
+	LIB_FLAGS += -lm -lpthread -ldl -lrt -lX11
 endif
 ifeq ($(findstring MINGW,$(UNAME_S)),MINGW)
 	LIB_FLAGS += -lopengl32 -lgdi32
