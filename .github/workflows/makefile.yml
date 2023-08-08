@@ -15,7 +15,7 @@ jobs:
     - uses: actions/checkout@v3
 
     - name: Install dependencies
-      run: sudo apt-get update && sudo apt-get install -y libxcursor-dev && sudo apt-get install -y libxinerama-dev && sudo apt-get install -y libxcursor-dev && make setup
+      run: sudo apt-get update && sudo apt-get install libx11-dev && sudo apt-get install libxcursor-dev && sudo apt-get install libxinerama-dev && sudo apt-get install libxcursor-dev && make setup
 
     - name: Build
       run: make build
