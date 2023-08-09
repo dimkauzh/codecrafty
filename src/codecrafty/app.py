@@ -1,27 +1,15 @@
 """
 A super fast and extensible code editor written in Python
 """
-import toga
-from toga.style import Pack
-from toga.style.pack import COLUMN, ROW
 
+import tkinter as tk
+import codecrafty.menu as menu
 
-class codecrafty(toga.App):
+class CodeCrafty:
+    def __init__(self) -> None:
+        self.run()
 
-    def startup(self):
-        """
-        Construct and show the Toga application.
-
-        Usually, you would add your application to a main content box.
-        We then create a main window (with a name matching the app), and
-        show the main window.
-        """
-        main_box = toga.Box()
-
-        self.main_window = toga.MainWindow(title=self.formal_name)
-        self.main_window.content = main_box
-        self.main_window.show()
-
-
-def main():
-    return codecrafty()
+    def run(self):
+        self.root = tk.Tk()
+        menu.Menu(self.root)
+        self.root.mainloop()

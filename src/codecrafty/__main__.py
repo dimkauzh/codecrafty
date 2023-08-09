@@ -1,4 +1,4 @@
-from codecrafty.app import main
+import codecrafty.app as app
 
 if __name__ == '__main__':
-    main().main_loop()
+    app.CodeCrafty()
