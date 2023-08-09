@@ -2,7 +2,7 @@
 🎉📝 Welcome to codecrafty! 🎉📝
 
 ### Description
-🚀 codecrafty is a super fast and extensible code editor written in C++ and powered by raylib. It's designed to be an enjoyable and educational project, where you can dive into the world of code and unleash your creativity! 🤩
+🚀 codecrafty is a super fast and extensible code editor written in Python and powered by Toga + Briefcase. It's designed to be an enjoyable and educational project, where you can dive into the world of code and unleash your creativity! 🤩
 
 ### Disclaimer
 ⚠️ Important: codecrafty is purely created for fun and educational purposes. 🤓 It's packed with weird design issues that will keep you on your toes! Embrace the quirks and let your coding adventures begin! 🕵️‍♂️💻
@@ -12,42 +12,59 @@
 
 🧩 Super Extensible: codecrafty provides a framework that allows you to add your own twists, extensions, and surprises! 🧠💡
 
-🚀 Blazing Fast: Harness the power of C++ and raylib for a seamless coding experience. ⚡️💻
+🚀 Blazing Fast: Harness the power of Python and Toga + Briefcase for a seamless coding experience. ⚡️💻
 
 🌈 Aesthetically Quirky: Embrace the weirdness of codecrafty's design issues for a one-of-a-kind coding journey! 🎨😄
 
 ## Getting Started
-🛠️ To embark on this delightful coding adventure, follow these simple steps:
+As of now, codecrafty is only setup to run on unix, but you still can [run it on windows](#Windows) if you're feeling adventurous! 🤠
 
-### Build and run at same time
-Clone the repository:
+### Unix
+Because were are using briefcase and stuff, we included a command in our Makefile to setup everything you need, this is all it does for you:
+ - Create a virtual environment
+ - Install Briefcase
+ - Install Toga
+
+To run the command, clone the repo:
 ```bash
-git clone https://github.com/your_username/codecrafty.git
+git clone https://github.com/dimkauzh/codecrafty.git
 cd codecrafty
 ```
 
-Build and run the project:
+Then run it:
+```bash
+make setup
+```
+
+### Windows
+If you're on windows, you can still run codecrafty, but you'll have to do a bit more work. 🤓
+
+First, clone the repo:
+```bash
+git clone https://github.com/dimkauzh/codecrafty.git
+cd codecrafty
+```
+
+Then, create a virtual environment and activate it:
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
+
+Next, install the dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+And your done! Now head over to [run](#Run) to start coding! 🚀
+
+### Run
+To run codecrafty, simply run the following command:
 ```bash
 make run
 ```
 
-### Build and run
-Clone the repository:
-```bash
-git clone https://github.com/your_username/codecrafty.git
-cd codecrafty
-```
-
-Build and run the project:
-```bash
-make build
-```
-
-Run codecrafty:
-```bash
-./codecrafty
-```
-
+This will run the dev release of our code editor (with briefcase).
 Let the fun begin! 🎉🚀
 
 ## Contributing
