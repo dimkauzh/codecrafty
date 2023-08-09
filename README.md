@@ -17,7 +17,7 @@
 🌈 Aesthetically Quirky: Embrace the weirdness of codecrafty's design issues for a one-of-a-kind coding journey! 🎨😄
 
 ## Getting Started
-As of now, codecrafty is only setup to run on unix, but you still can [run it on windows](#Windows) if you're feeling adventurous! 🤠
+As of now, codecrafty is only setup to run on unix, but you still can [run it on windows](###Windows) if you're feeling adventurous! 🤠
 
 ### Unix
 Because were are using briefcase and stuff, we included a command in our Makefile to setup everything you need, this is all it does for you:
