@@ -1,4 +1,4 @@
-module codecrafty
+module github.com/dimkauzh/codecrafty
 
 go 1.20
 

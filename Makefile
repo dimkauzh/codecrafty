@@ -1,5 +1,5 @@
 GO = go
-MAIN_FILE = src/main.go
+MAIN_FILE = src/codecrafty/main.go
 NAME = codecrafty
 
 .PHONY: run build build_run
