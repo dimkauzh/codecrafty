@@ -1,11 +1,40 @@
-BRIEFCASE = briefcase
+GO = go
+MAIN_FILE = src/main.go
+NAME = codecrafty
 
-.PHONY: run setup
+.PHONY: run build build_run
 
 run:
-	$(BRIEFCASE) dev
+	@echo
+	@echo " ----------------------------------------------------"
+	@echo "|              Running $(NAME)...                 |"
+	@echo " ----------------------------------------------------"
+	@echo
+	
+	@$(GO) run $(MAIN_FILE)
 
-setup:
-	python -m venv venv
-	source venv/bin/activate
-	pip install -r requirements.txt
+build:
+	@echo
+	@echo " ----------------------------------------------------"
+	@echo "|              Building $(NAME)...                |"
+	@echo " ----------------------------------------------------"
+	@echo
+
+	$(GO) build -o bin/$(NAME) $(MAIN_FILE)
+
+build_run:
+	@echo
+	@echo " ----------------------------------------------------"
+	@echo "|              Building $(NAME)...                |"
+	@echo " ----------------------------------------------------"
+	@echo
+
+	$(GO) build -o bin/$(NAME) $(MAIN_FILE)
+
+	@echo
+	@echo " ----------------------------------------------------"
+	@echo "|              Running $(NAME)...                 |"
+	@echo " ----------------------------------------------------"
+	@echo
+
+	./bin/$(NAME)
