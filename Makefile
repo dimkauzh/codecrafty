@@ -20,7 +20,16 @@ build:
 	@echo " ----------------------------------------------------"
 	@echo
 
-	$(GO) build -o bin/$(NAME) $(MAIN_FILE)
+	@$(GO) build -o bin/$(NAME) $(MAIN_FILE)
+
+setup:
+	@echo
+	@echo
+	@echo " ----------------------------------------------------"
+	@echo "      Installing Packages for Dev version...      |"
+	@echo " ----------------------------------------------------"
+	@echo
+	$(GO) mod tidy
 
 build_run:
 	@echo
@@ -29,7 +38,7 @@ build_run:
 	@echo " ----------------------------------------------------"
 	@echo
 
-	$(GO) build -o bin/$(NAME) $(MAIN_FILE)
+	@$(GO) build -o bin/$(NAME) $(MAIN_FILE)
 
 	@echo
 	@echo " ----------------------------------------------------"
@@ -37,4 +46,4 @@ build_run:
 	@echo " ----------------------------------------------------"
 	@echo
 
-	./bin/$(NAME)
+	@./bin/$(NAME)
