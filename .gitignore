@@ -1,1 +1,2 @@
-# nothing to ignore for now
+*.sublime-project
+*.sublime-workspace
