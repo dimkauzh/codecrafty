@@ -1,11 +1,14 @@
 package menu
 
 import (
-	"fmt"
-
 	"fyne.io/fyne/v2"
+	"fyne.io/fyne/v2/widget"
 )
 
 func Menu(w fyne.Window, a fyne.App) {
-	fmt.Println("Menu")
+	w.SetContent(widget.NewLabel("Test"))
 }
+
+func newProject()
+
+func openProject()
