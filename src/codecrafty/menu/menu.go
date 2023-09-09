@@ -13,10 +13,13 @@ func Menu(w fyne.Window, a fyne.App) {
 	w.SetContent(widget.NewLabel("Test"))
 
 	// Main text
-	text1 := canvas.NewText("Welcome to Codecrafty!", nil)
+	startText := canvas.NewText("Codecrafty", nil)
 
-	text1.Resize(fyne.NewSize(400, 250))
-	text1.Move(fyne.NewPos(20, 20))
+	welcome := canvas.NewText("Welcome to Codecrafty!", nil)
+
+	//text1.Resize(fyne.NewSize(700, 450))
+	startText.Move(fyne.NewPos(0, 0))
+	startText.TextSize = 85
 
 	// Project buttons
 	button1 := widget.NewButton("Click me", newProject)
