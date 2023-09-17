@@ -17,21 +17,28 @@ func Menu(w fyne.Window, a fyne.App) {
 
 	welcome := canvas.NewText("Welcome to Codecrafty!", nil)
 
-	//text1.Resize(fyne.NewSize(700, 450))
-	startText.Move(fyne.NewPos(0, 0))
+	// Setting up the start text
+	startText.Move(fyne.NewPos(400, 10))
 	startText.TextSize = 85
 
+	// Setting up the welcome text
+	welcome.Move(fyne.NewPos(470, 120))
+	welcome.TextSize = 25
+
 	// Project buttons
-	button1 := widget.NewButton("Click me", newProject)
+	button1 := widget.NewButton("New Project", newProject)
+	button2 := widget.NewButton("Open Project", openProject)
 
-	button1.Resize(fyne.NewSize(150, 30))
-	button1.Move(fyne.NewPos(100, 100))
+	// Setting up the new project button
+	button1.Resize(fyne.NewSize(200, 50))
+	button1.Move(fyne.NewPos(150, 250))
 
-	// Menu container
-	text := container.NewWithoutLayout(text1, button1)
+	// Setting up the open project button
+	button2.Resize(fyne.NewSize(200, 50))
+	button2.Move(fyne.NewPos(150, 320))
 
-	// Drawing the menu
-	w.SetContent(text)
+	// Drawing with a menu container
+	w.SetContent(container.NewVBox(startText, welcome, button1, button2))
 
 }
 
