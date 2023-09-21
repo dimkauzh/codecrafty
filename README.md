@@ -5,7 +5,7 @@
 
 
 ### Description
-🚀 codecrafty is a super fast and extensible code editor written in Go and powered by Fyne. It's designed to be an enjoyable and educational project, where you can dive into the world of code and unleash your creativity! 🤩
+🚀 codecrafty is a super fast and extensible code editor written in Go and powered by FLTK. It's designed to be an enjoyable and educational project, where you can dive into the world of code and unleash your creativity! 🤩
 
 ### Disclaimer
 ⚠️ Important: codecrafty is purely created for fun and educational purposes. 🤓 It's packed with weird design issues that will keep you on your toes! Embrace the quirks and let your coding adventures begin! 🕵️‍♂️💻
@@ -15,7 +15,7 @@
 
 🧩 Super Extensible: codecrafty provides a framework that allows you to add your own twists, extensions, and surprises! 🧠💡
 
-🚀 Blazing Fast: Harness the power of Go and Fyne for a seamless coding experience. ⚡️💻
+🚀 Blazing Fast: Harness the power of Go and FLTK for a seamless coding experience. ⚡️💻
 
 🌈 Aesthetically Quirky: Embrace the weirdness of codecrafty's design issues for a one-of-a-kind coding journey! 🎨😄
 
