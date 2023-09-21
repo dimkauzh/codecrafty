@@ -4,9 +4,6 @@
 </p>
 
 
-# !!!!!!!!!!!!!!!   This project is discontinued   !!!!!!!!!!!!!!!
-
-
 ### Description
 🚀 codecrafty is a super fast and extensible code editor written in Go and powered by Fyne. It's designed to be an enjoyable and educational project, where you can dive into the world of code and unleash your creativity! 🤩
 
