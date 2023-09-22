@@ -2,11 +2,9 @@ package menu
 
 import (
 	"fmt"
-
-	"fyne.io/fyne"
 )
 
-func Menu(w fyne.Window, a fyne.App) {
+func Menu() {
 }
 
 func newProject() {
