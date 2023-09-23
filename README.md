@@ -22,7 +22,7 @@
 ## Getting Started
 As of now, codecrafty is only setup to run on unix, but you still can run it on windows if you're feeling adventurous! 🤠
 
-### requirement
+### Setting up
 You need go for codecrafty. In addition to Go, you will also need a C++11 compiler. The FLTK libraries are bundled with the repo for x86_64 Linux, MacOS and Windows (mingw64).
 You also need some system libs which are normally available on operating systems with a graphical user interfaces:
 - Windows: No external dependencies (for mingw64)
@@ -37,27 +37,28 @@ You also need some system libs which are normally available on operating systems
     - Xinerama
     - OpenGL
 
-
 Clone the repo:
 ```bash
 git clone https://github.com/dimkauzh/codecrafty.git
 cd codecrafty
 ```
 
-Then run it:
+Then run the setup command:
 ```bash
 make setup
 ```
-### Build
-Clone the repo:
-```bash
-git clone https://github.com/dimkauzh/codecrafty.git
-cd codecrafty
-```
+
+### Build/Run
+To follow these instructions you need to have the repo cloned
 
 To run codecrafty, simply run the following command:
 ```bash
 make run
+```
+
+And to build codecrafty, just run:
+```bash
+make build
 ```
 
 Let the fun begin! 🎉🚀
