@@ -30,7 +30,6 @@ setup:
 	@echo " ----------------------------------------------------"
 	@echo
 	$(GO) mod tidy
-	source .env
 
 build_run:
 	@echo
