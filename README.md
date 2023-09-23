@@ -22,7 +22,7 @@
 ## Getting Started
 As of now, codecrafty is only setup to run on unix, but you still can run it on windows if you're feeling adventurous! 🤠
 
-### requirement
+### Setting up
 Our engine is build in go and thats the only thing you need for now. So if you have go installed then you can continue with the next step
 
 Clone the repo:
@@ -31,20 +31,22 @@ git clone https://github.com/dimkauzh/codecrafty.git
 cd codecrafty
 ```
 
-Then run it:
+Then run the setup command:
 ```bash
 make setup
 ```
-### Build
-Clone the repo:
-```bash
-git clone https://github.com/dimkauzh/codecrafty.git
-cd codecrafty
-```
+
+### Build/Run
+To follow these instructions you need to have the repo cloned
 
 To run codecrafty, simply run the following command:
 ```bash
 make run
+```
+
+And to build codecrafty, just run:
+```bash
+make build
 ```
 
 Let the fun begin! 🎉🚀
