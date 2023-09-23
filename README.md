@@ -23,7 +23,20 @@
 As of now, codecrafty is only setup to run on unix, but you still can run it on windows if you're feeling adventurous! 🤠
 
 ### requirement
-Our engine is build in go and thats the only thing you need for now. So if you have go installed then you can continue with the next step
+You need go for codecrafty. In addition to Go, you will also need a C++11 compiler. The FLTK libraries are bundled with the repo for x86_64 Linux, MacOS and Windows (mingw64).
+You also need some system libs which are normally available on operating systems with a graphical user interfaces:
+- Windows: No external dependencies (for mingw64)
+- MacOS: No external dependencies
+- Linux: You need:
+    - x11
+    - Xrender
+    - Xcursor
+    - Xfixes
+    - Xext
+    - Xft
+    - Xinerama
+    - OpenGL
+
 
 Clone the repo:
 ```bash
