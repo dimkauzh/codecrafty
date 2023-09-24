@@ -12,8 +12,7 @@ func Menu(win *gtk.Window) {
 
 	newproject := bd.NewButton(win, "New Project", 50, 50, 200, 50)
 
-	_ = newproject
-
+  newproject.IsPressed(win, newProject)
 }
 
 func newProject() {

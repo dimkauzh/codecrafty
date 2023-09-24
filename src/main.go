@@ -10,6 +10,12 @@ import (
 func main() {
   gtk.Init(nil)
 
+  settings, err := gtk.SettingsGetDefault()
+  if err != nil {
+    fmt.Println("Unable to get default settings:", err)
+  }
+  settings.SetProperty("gtk-application-prefer-dark-theme", true)
+
   win, err := gtk.WindowNew(gtk.WINDOW_TOPLEVEL)
   if err != nil {
     fmt.Println("Unable to create window:", err)
@@ -23,6 +29,7 @@ func main() {
   win.SetDefaultSize(800, 600)
 
   codecrafty(win)
+
 
   win.ShowAll()
   gtk.Main()
