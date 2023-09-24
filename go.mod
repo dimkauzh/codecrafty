@@ -2,4 +2,4 @@ module codecrafty
 
 go 1.20
 
-require github.com/pwiecz/go-fltk v0.0.0-20230914091614-7c03ea571a74
+require github.com/gotk3/gotk3 v0.6.2

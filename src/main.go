@@ -1,24 +1,33 @@
 package main
 
 import (
-	bd "codecrafty/src/backend"
-	menu "codecrafty/src/menu"
-	fltk "github.com/pwiecz/go-fltk"
+  "codecrafty/src/menu"
+  "fmt"
+
+  "github.com/gotk3/gotk3/gtk"
 )
 
 func main() {
-	fltk.InitStyles()
-	win := fltk.NewWindow(400, 300)
-	win.SetLabel("codecrafty")
-	win.SetColor(bd.BACKGROUND)
+  gtk.Init(nil)
 
-	codecrafty(win)
+  win, err := gtk.WindowNew(gtk.WINDOW_TOPLEVEL)
+  if err != nil {
+    fmt.Println("Unable to create window:", err)
+  }
 
-	win.End()
-	win.Show()
-	fltk.Run()
+  win.SetTitle("GTK Example")
+  win.Connect("destroy", func() {
+    gtk.MainQuit()
+  })
+
+  win.SetDefaultSize(800, 600)
+
+  codecrafty(win)
+
+  win.ShowAll()
+  gtk.Main()
 }
 
-func codecrafty(window *fltk.Window) {
-	menu.Menu()
+func codecrafty(win *gtk.Window) {
+  menu.Menu(win)
 }

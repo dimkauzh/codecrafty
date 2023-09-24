@@ -5,7 +5,7 @@
 
 
 ### Description
-🚀 codecrafty is a super fast and extensible code editor written in Go and powered by FLTK. It's designed to be an enjoyable and educational project, where you can dive into the world of code and unleash your creativity! 🤩
+🚀 codecrafty is a super fast and extensible code editor written in Go and powered by GTK3. It's designed to be an enjoyable and educational project, where you can dive into the world of code and unleash your creativity! 🤩
 
 ### Disclaimer
 ⚠️ Important: codecrafty is purely created for fun and educational purposes. 🤓 It's packed with weird design issues that will keep you on your toes! Embrace the quirks and let your coding adventures begin! 🕵️‍♂️💻
@@ -15,27 +15,27 @@
 
 🧩 Super Extensible: codecrafty provides a framework that allows you to add your own twists, extensions, and surprises! 🧠💡
 
-🚀 Blazing Fast: Harness the power of Go and FLTK for a seamless coding experience. ⚡️💻
+🚀 Blazing Fast: Harness the power of Go and GTK3 for a seamless coding experience. ⚡️💻
 
 🌈 Aesthetically Quirky: Embrace the weirdness of codecrafty's design issues for a one-of-a-kind coding journey! 🎨😄
 
 ## Getting Started
-As of now, codecrafty is only setup to run on unix, but you still can run it on windows if you're feeling adventurous! 🤠
+You need Go installed for codecrafty. In addition to Go, you will also need GTK3 installed.
+
+#### Linux
+On linux you need special GTK3 packages, to install that run:
+```bash
+sudo apt install libgtk-3 libglib2 libgdk-pixbuf2
+```
+
+#### macOS
+On macOS you need to install GTK3 using brew:
+```bash
+brew install gtk3
+```
 
 ### Setting up
-You need go for codecrafty. In addition to Go, you will also need a C++11 compiler. The FLTK libraries are bundled with the repo for x86_64 Linux, MacOS and Windows (mingw64).
-You also need some system libs which are normally available on operating systems with a graphical user interfaces:
-- Windows: No external dependencies (for mingw64)
-- MacOS: No external dependencies
-- Linux: You need:
-    - x11
-    - Xrender
-    - Xcursor
-    - Xfixes
-    - Xext
-    - Xft
-    - Xinerama
-    - OpenGL
+
 
 Clone the repo:
 ```bash
@@ -56,10 +56,16 @@ To run codecrafty, simply run the following command:
 make run
 ```
 
-And to build codecrafty, just run:
+To build codecrafty to a executable, run the following command:
 ```bash
 make build
 ```
+This will create a executable in the `bin` folder.
+
+#### Keep in mind
+The first time building/running may take a while because of building the gtk executables, so give it time. If there is a error the cmd will tell you. It may take between 1-7 minutes.
+
+Codecrafty is still in development, so you will encounter bugs and issues. If you do, please open a github issue and let us know! 
 
 Let the fun begin! 🎉🚀
 
@@ -67,6 +73,8 @@ Let the fun begin! 🎉🚀
 🙌 We welcome contributions to codecrafty! Whether it's fixing a bug or adding new quirky features, your creativity is valued! 🤝🎭
 
 Please adhere to the following guidelines:
+
+Create a fork of this repository
 
 Create a new branch for your contribution:
 
