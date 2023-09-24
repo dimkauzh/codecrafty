@@ -21,7 +21,7 @@ func main() {
     fmt.Println("Unable to create window:", err)
   }
 
-  win.SetTitle("GTK Example")
+  win.SetTitle("codecrafty")
   win.Connect("destroy", func() {
     gtk.MainQuit()
   })
@@ -29,7 +29,6 @@ func main() {
   win.SetDefaultSize(800, 600)
 
   codecrafty(win)
-
 
   win.ShowAll()
   gtk.Main()

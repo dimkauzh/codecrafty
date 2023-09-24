@@ -1,8 +1,7 @@
 package backend
 
 import (
-  "fmt"
-
+  "log"
   "github.com/gotk3/gotk3/gtk"
 )
 
@@ -11,11 +10,14 @@ var BACKGROUND = [3]int{61, 61, 61}
 type button struct {
   w      *gtk.Window
   b      *gtk.Button
-  c      *gtk.Container
   x      int
   y      int
   width  int
   height int
+}
+
+type container struct {
+  c *gtk.Fixed
 }
 
 func (b *button) IsPressed(win *gtk.Window, function func()) {
@@ -24,24 +26,31 @@ func (b *button) IsPressed(win *gtk.Window, function func()) {
   })
 }
 
-func NewButton(win *gtk.Window, label string, x, y, width, height int) button {
+func (b *button) AddContainer(c *container) {
+  c.c.Put(b.b, b.x, b.y)
+}
 
-  // Create a fixed container
-  fixed, err := gtk.FixedNew()
-  if err != nil {
-    fmt.Println("Unable to create Fixed container:", err)
-  }
-  win.Add(fixed)
+func NewButton(win *gtk.Window, label string, x, y, width, height int) button {
 
   b, err := gtk.ButtonNewWithLabel(label)
 
   if err != nil {
-    fmt.Println("Unable to create a button:", err)
+    log.Fatal("Unable to create a button:", err)
+    panic(err)
   }
 
   // Set button position and size (x, y, width, height) within the fixed container
   b.SetSizeRequest(width, height) // width and height
-  fixed.Put(b, x, y)              // x and y
 
-  return button{win, b, nil, x, y, width, height}
+  return button{win, b, x, y, width, height}
+}
+
+func NewContainer(win *gtk.Window) container {
+  fixed, err := gtk.FixedNew()
+  if err != nil {
+    log.Fatal("Unable to create Fixed container:", err)
+  }
+  win.Add(fixed)
+
+  return container{fixed}
 }
