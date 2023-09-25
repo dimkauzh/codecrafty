@@ -2,38 +2,25 @@ package main
 
 import (
   "codecrafty/src/menu"
-  "fmt"
 
-  "github.com/gotk3/gotk3/gtk"
+  "fyne.io/fyne/v2/theme"
+  "fyne.io/fyne/v2"
+  "fyne.io/fyne/v2/app"
 )
 
 func main() {
-  gtk.Init(nil)
+  myApp := app.New()
+  myWindow := myApp.NewWindow("codecrafty")
 
-  settings, err := gtk.SettingsGetDefault()
-  if err != nil {
-    fmt.Println("Unable to get default settings:", err)
-  }
-  settings.SetProperty("gtk-application-prefer-dark-theme", true)
+  myApp.Settings().SetTheme(theme.DarkTheme())
 
-  win, err := gtk.WindowNew(gtk.WINDOW_TOPLEVEL)
-  if err != nil {
-    fmt.Println("Unable to create window:", err)
-  }
+  myWindow.Resize(fyne.NewSize(800, 600))
 
-  win.SetTitle("codecrafty")
-  win.Connect("destroy", func() {
-    gtk.MainQuit()
-  })
+  codecrafty(myWindow)
 
-  win.SetDefaultSize(800, 600)
-
-  codecrafty(win)
-
-  win.ShowAll()
-  gtk.Main()
+  myWindow.ShowAndRun()
 }
 
-func codecrafty(win *gtk.Window) {
-  menu.Menu(win)
+func codecrafty(w fyne.Window) {
+  menu.Menu(w)
 }

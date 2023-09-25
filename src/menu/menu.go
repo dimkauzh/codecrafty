@@ -5,20 +5,21 @@ import (
 
 	bd "codecrafty/src/backend"
 
-	"github.com/gotk3/gotk3/gtk"
+	"fyne.io/fyne/v2"
+  "fyne.io/fyne/v2/container"
 )
 
-func Menu(win *gtk.Window) {
-  container := bd.NewContainer(win)
-  
-	newproject := bd.NewButton(win, "New Project", 50, 50, 200, 50)
-  openproject := bd.NewButton(win, "Open Project", 50, 100, 200, 50)
+func Menu(w fyne.Window) {
+	newproject := bd.NewButton(w, "New Project", 50, 50, 200, 50)
+	openproject := bd.NewButton(w, "Open Project", 50, 500, 200, 50)
 
-  newproject.IsPressed(win, newProject)
-  openproject.IsPressed(win, openProject)
+	newproject.IsPressed(newProject)
+	openproject.IsPressed(openProject)
 
-  newproject.AddContainer(&container)
-  openproject.AddContainer(&container)
+  content := container.NewWithoutLayout(newproject.Container(), openproject.Container())
+ 
+  bd.DrawContainer(w, content)
+
 }
 
 func newProject() {
