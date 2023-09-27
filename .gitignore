@@ -5,3 +5,6 @@
 bin/
 
 test.go
+
+.zed/
+.vscode/

@@ -1,26 +1,26 @@
 package main
 
 import (
-  "codecrafty/src/menu"
+	"codecrafty/src/menu"
 
-  "fyne.io/fyne/v2/theme"
-  "fyne.io/fyne/v2"
-  "fyne.io/fyne/v2/app"
+	"fyne.io/fyne/v2"
+	"fyne.io/fyne/v2/app"
+	"fyne.io/fyne/v2/theme"
 )
 
 func main() {
-  myApp := app.New()
-  myWindow := myApp.NewWindow("codecrafty")
+	myApp := app.New()
+	myWindow := myApp.NewWindow("codecrafty")
 
-  myApp.Settings().SetTheme(theme.DarkTheme())
+	myApp.Settings().SetTheme(theme.DarkTheme())
 
-  myWindow.Resize(fyne.NewSize(800, 600))
+	myWindow.Resize(fyne.NewSize(800, 600))
 
-  codecrafty(myWindow)
+	codecrafty(myWindow)
 
-  myWindow.ShowAndRun()
+	myWindow.ShowAndRun()
 }
 
 func codecrafty(w fyne.Window) {
-  menu.Menu(w)
+	menu.Menu(w)
 }
