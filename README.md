@@ -50,8 +50,9 @@ make build
 This will create a executable in the `bin` folder.
 
 #### Keep in mind
+First time build can take a very long time, around 5-10 minutes. This is because Fyne needs to download and compile a lot of dependencies. Subsequent builds will be much faster.
 
-Codecrafty is still in development, so you will encounter bugs and issues. If you do, please open a github issue and let us know! 
+Codecrafty is still in development, so you will encounter bugs and issues. If you do, please open a github issue and let us know!
 
 Let the fun begin! 🎉🚀
 
