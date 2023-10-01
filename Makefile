@@ -1,6 +1,8 @@
 GO = go
 MAIN_FILE = src/main.go
 NAME = codecrafty
+FYNE = fyne
+WEB_TARGET = wasm
 
 .PHONY: run build build_run
 
@@ -10,7 +12,7 @@ run:
 	@echo "|              Running $(NAME)...                 |"
 	@echo " ----------------------------------------------------"
 	@echo
-	
+
 	@$(GO) run $(MAIN_FILE)
 
 build:
@@ -47,3 +49,12 @@ build_run:
 	@echo
 
 	@./bin/$(NAME)
+
+web:
+	@echo
+	@echo " ----------------------------------------------------"
+	@echo "|            Running Web version...              |"
+	@echo " ----------------------------------------------------"
+	@echo
+
+	@$(FYNE) serve --sourceDir src --icon ../assets/icon/Icon.png --target $(WEB_TARGET)

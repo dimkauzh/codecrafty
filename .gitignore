@@ -1,6 +1,9 @@
 *.sublime-project
 *.sublime-workspace
 **.DS_Store
+**.env
+wasm/
+
 
 bin/
 
