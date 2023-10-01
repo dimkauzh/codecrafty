@@ -6,7 +6,7 @@ import (
 	bd "codecrafty/src/backend"
 
 	"fyne.io/fyne/v2"
-  "fyne.io/fyne/v2/container"
+	"fyne.io/fyne/v2/container"
 )
 
 func Menu(w fyne.Window) {
@@ -16,9 +16,9 @@ func Menu(w fyne.Window) {
 	newproject.IsPressed(newProject)
 	openproject.IsPressed(openProject)
 
-  content := container.NewWithoutLayout(newproject.Container(), openproject.Container())
- 
-  bd.DrawContainer(w, content)
+	content := container.NewWithoutLayout(newproject.Container(), openproject.Container())
+
+	bd.DrawContainer(w, content)
 
 }
 
